@@ -1,0 +1,36 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/genomelink/genomelink-python
+docs: https://genomelink.io/developers/
+summary:
+  types: [oauth2, http]
+  api_key_in: []
+  oauth2_flows: [authorizationCode]
+  http_schemes: [bearer]
+schemes:
+- name: oauth2
+  type: oauth2
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://genomelink.io/oauth/authorize
+    tokenUrl: https://genomelink.io/oauth/token
+    grant_type: authorization_code
+    response_type: code
+    params: [client_id, client_secret, redirect_uri, scope]
+    sources:
+    - https://github.com/genomelink/genomelink-python/blob/master/genomelink/oauth.py
+    - https://github.com/genomelink/genomelink-node/blob/master/src/OAuth.js
+- name: bearer
+  type: http
+  scheme: bearer
+  description: >-
+    The issued OAuth access token is presented as an HTTP Bearer token
+    (Authorization: Bearer <access_token>) on report requests. The enterprise
+    reports endpoint presents the client secret as the Bearer credential.
+  sources:
+  - https://github.com/genomelink/genomelink-python/blob/master/genomelink/resource/report.py
+notes: >-
+  Derived and verified from AWAKENS' official first-party SDK source (Python and
+  Node.js). Standard OAuth 2.0 authorization-code flow against genomelink.io;
+  the API base is configurable via GENOMELINK_API_BASE and defaults to
+  https://genomelink.io. There is no apiKey scheme.
