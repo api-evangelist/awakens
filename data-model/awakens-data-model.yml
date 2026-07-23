@@ -1,0 +1,35 @@
+generated: '2026-07-18'
+method: derived
+source: https://github.com/genomelink/genomelink-python/blob/master/genomelink/resource/report.py
+entities:
+- name: Report
+  description: >-
+    A genetic trait report for a consenting user, addressed by trait name and
+    population.
+  identified_by: [name, population]
+  fields:
+  - name: phenotype
+    type: object
+    note: The trait/phenotype the report describes (e.g. eye-color).
+  - name: population
+    type: string
+    note: Reference population (e.g. european).
+  - name: scores
+    type: object
+    note: Polygenic scores computed from the user's SNPs.
+  - name: summary
+    type: object
+    note: Human-readable interpretation, including summary.text.
+  request_params:
+  - name: name
+    in: path
+    example: eye-color
+  - name: population
+    in: query
+    example: european
+relationships: []
+notes: >-
+  Derived from AWAKENS' official Python SDK Report resource. A single Report
+  entity is exposed; the enterprise reports endpoint returns the same record
+  shape via a client-secret token exchange. No inter-entity $ref relationships
+  are documented.

@@ -1,0 +1,29 @@
+generated: '2026-07-18'
+method: derived
+source: https://github.com/genomelink/genomelink-python
+standards:
+- id: oauth2
+  conforms: true
+  evidence: >-
+    OAuth 2.0 authorization-code flow with /oauth/authorize and /oauth/token,
+    response_type=code, grant_type=authorization_code (SDK oauth.py / OAuth.js).
+- id: oauth2-authorization-code
+  conforms: true
+  evidence: SDK implements the RFC 6749 authorization-code grant end to end.
+- id: bearer-token-rfc6750
+  conforms: true
+  evidence: Access token presented as Authorization Bearer on report requests.
+- id: oidc
+  conforms: false
+  evidence: No openid-configuration document and no id_token issuance observed.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: >-
+    Errors returned as RFC 6749 OAuth error codes, not application/problem+json.
+- id: rfc8414-oauth-authorization-server-metadata
+  conforms: false
+  evidence: /.well-known/oauth-authorization-server returns 404.
+notes: >-
+  Derived from AWAKENS' official SDK source. No published compliance program
+  (SOC 2 / ISO 27001 / HIPAA) was found on the site, so no Compliance pointer
+  is emitted.

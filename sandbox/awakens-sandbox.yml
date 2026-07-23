@@ -1,0 +1,23 @@
+generated: '2026-07-18'
+method: searched
+source: https://genomelink.io/developers/
+test_tokens:
+- value: GENOMELINKTEST
+  usage: >-
+    Documented test access token for Report.fetch in the Python SDK example
+    (returns a canned eye-color report).
+  source: https://github.com/genomelink/genomelink-python/blob/master/README.md
+- value: GENOMELINKTEST001
+  usage: >-
+    Documented test Bearer token in the developers-page and Node.js SDK example
+    (Authorization: Bearer GENOMELINKTEST001).
+  source: https://genomelink.io/developers/
+test_request:
+  method: GET
+  example: https://genomelink.io/v1/reports/eye-color/?population=european
+  auth: Authorization Bearer <test_token>
+notes: >-
+  Genomelink publishes fixed magic test tokens that return a canned trait report
+  so developers can exercise the report-fetch flow without a real user's DNA
+  data or a live OAuth grant. Values captured verbatim from AWAKENS' own docs
+  and SDK examples; never invented.

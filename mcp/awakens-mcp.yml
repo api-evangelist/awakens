@@ -1,0 +1,29 @@
+generated: '2026-07-18'
+method: derived
+status: candidate
+source: https://github.com/genomelink/genomelink-python
+server:
+  name: awakens-genomelink
+  transport: http
+  url: null
+  note: >-
+    No official hosted/remote MCP server is published by AWAKENS. This is a
+    candidate tool list derived from the two documented Genomelink Developer API
+    operations so a fork can stand up an MCP wrapper.
+auth:
+  type: oauth2
+  flow: authorization_code
+  see: authentication/awakens-authentication.yml
+tools:
+- name: fetch_report
+  description: >-
+    Fetch a consenting user's genetic trait report by trait name and population
+    using the user's Bearer access token.
+  source_operation: GET https://genomelink.io/v1/reports/{name}/?population={population}
+  inputs: [name, population, token]
+- name: fetch_enterprise_report
+  description: >-
+    Exchange a user token for a report using the enterprise client-secret
+    Bearer credential.
+  source_operation: POST https://genomelink.io/v1/enterprise/reports/
+  inputs: [token]

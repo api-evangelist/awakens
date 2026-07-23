@@ -1,0 +1,25 @@
+generated: '2026-07-18'
+method: searched
+source: https://genomelink.io/developers/
+versioning:
+  scheme: uri-path
+  current: v1
+availability:
+  status: unavailable
+  evidence: >-
+    The developers page states "Genomelink Developer API is currently not
+    available." The two official SDKs (genomelink-python, genomelink-node) are
+    archived on GitHub (2018 and 2019).
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+  note: No formal deprecation policy or Sunset/Deprecation header support documented.
+sla:
+  url: null
+status_page: null
+note: >-
+  No public status page or formal SLA/deprecation policy was found. The
+  documented API surface and OAuth flow are captured from the official SDKs even
+  though public developer access is currently marked unavailable. No StatusPage
+  or Deprecation pointer is emitted because neither a status page nor a
+  deprecation policy is published.

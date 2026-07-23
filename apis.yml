@@ -1,7 +1,19 @@
 aid: awakens
 name: AWAKENS
-description: AWAKENS is a company surfaced as a portfolio company of 500-global and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  AWAKENS (operating the consumer product Genomelink at genomelink.io) is a
+  personal-genomics company that lets people upload the raw DNA data they
+  exported from AncestryDNA, 23andMe, or MyHeritage and receive additional
+  ancestry, trait, nutrition, and wellness reports interpreted from a knowledge
+  base of 100,000+ SNPs across 50+ genetic traits. For developers, AWAKENS
+  published the Genomelink Developer API — an OAuth 2.0 (authorization-code)
+  REST API that lets third-party apps request a user's genetic trait reports
+  (for example eye-color by population) after the user consents, plus an
+  enterprise reports endpoint. Official Python (`genomelink`) and Node.js
+  (`genomelink-node`) SDKs were shipped on PyPI and npm. The public developer
+  API is currently marked "not available" on the developers page, so the
+  artifacts here capture the documented OAuth surface, SDKs, and test
+  credentials from AWAKENS' own first-party sources.
 url: https://raw.githubusercontent.com/api-evangelist/awakens/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,12 +21,68 @@ x-backed-by:
 - 500-global
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
+image: https://genomelink.io/favicon.ico
 tags:
 - Company
-apis: []
+- Genomics
+- DNA
+- Bioinformatics
+- Health
+- Consumer Genetics
+- Ancestry
+- OAuth
+- Personal Genomics
+apis:
+- name: Genomelink Developer API
+  description: >-
+    OAuth 2.0 REST API for requesting a consenting user's genetic trait reports
+    from Genomelink. A report is fetched by trait name and population (for
+    example GET /v1/reports/eye-color/?population=european) using a Bearer
+    access token obtained via the authorization-code flow. An enterprise
+    reports endpoint (POST /v1/enterprise/reports/) exchanges a user token using
+    the client secret. Note: the public developer API is currently marked "not
+    available" on the developers page.
+  humanURL: https://genomelink.io/developers/
+  baseURL: https://genomelink.io
+  tags:
+  - Genomics
+  - DNA
+  - Reports
+  - OAuth
+  properties:
+  - type: Authentication
+    url: authentication/awakens-authentication.yml
+  - type: OAuthScopes
+    url: scopes/awakens-scopes.yml
+  - type: ErrorCatalog
+    url: errors/awakens-oauth-errors.yml
+  - type: Conventions
+    url: conventions/awakens-conventions.yml
+  - type: DataModel
+    url: data-model/awakens-data-model.yml
+  - type: MCPServer
+    url: mcp/awakens-mcp.yml
+  - type: Conformance
+    url: conformance/awakens-conformance.yml
+  - type: Sandbox
+    url: sandbox/awakens-sandbox.yml
+  - type: AgentSkill
+    url: skills/_index.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -23,3 +91,54 @@ maintainers:
 common:
 - type: Website
   url: https://genomelink.io
+- type: DeveloperPortal
+  url: https://genomelink.io/developers/
+- type: SignUp
+  url: https://genomelink.io/signup/
+- type: Login
+  url: https://genomelink.io/login/
+- type: Support
+  url: https://genomelink.io/help
+- type: Blog
+  url: https://genomelink.io/blog
+- type: TermsOfService
+  url: https://genomelink.io/legal/terms-of-use
+- type: PrivacyPolicy
+  url: https://privacy.genomelink.io/privacy-policy
+- type: GitHubOrganization
+  url: https://github.com/genomelink
+- type: Packages
+  url: packages/awakens-packages.yml
+- type: SDKs
+  url: packages/awakens-packages.yml
+- type: Authentication
+  url: authentication/awakens-authentication.yml
+- type: OAuthScopes
+  url: scopes/awakens-scopes.yml
+- type: WellKnown
+  url: well-known/awakens-well-known.yml
+- type: Lifecycle
+  url: lifecycle/awakens-lifecycle.yml
+- type: Conventions
+  url: conventions/awakens-conventions.yml
+- type: DomainSecurity
+  url: security/awakens-domain-security.yml
+- type: MCPServer
+  url: mcp/awakens-mcp.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: LLMsTxt
+  url: llms/awakens-llms.txt
+- type: Sandbox
+  url: sandbox/awakens-sandbox.yml
+- type: ErrorCatalog
+  url: errors/awakens-oauth-errors.yml
+- type: Conformance
+  url: conformance/awakens-conformance.yml
+- type: DataModel
+  url: data-model/awakens-data-model.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

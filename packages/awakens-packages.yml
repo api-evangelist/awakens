@@ -1,0 +1,30 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/genomelink
+packages:
+- language: python
+  registry: pypi
+  name: genomelink
+  url: https://pypi.org/project/genomelink/
+  install: pip install --upgrade genomelink
+  version: 0.3.0
+  repository: https://github.com/genomelink/genomelink-python
+  license: MIT
+  official: true
+  status: archived
+  note: >-
+    Official Genomelink Python SDK. Client library for the OAuth 2.0 Developer
+    API (OAuth authorize/token + Report.fetch). Repository archived 2018.
+- language: javascript
+  registry: npm
+  name: genomelink-node
+  url: https://www.npmjs.com/package/genomelink-node
+  install: npm install --save genomelink-node
+  version: 0.2.0
+  repository: https://github.com/genomelink/genomelink-node
+  license: MIT
+  official: true
+  status: archived
+  note: >-
+    Official Genomelink Node.js SDK. Requires Node >= 8.9.0. Repository archived
+    2019.

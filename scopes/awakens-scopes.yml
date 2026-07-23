@@ -1,0 +1,20 @@
+generated: '2026-07-18'
+method: derived
+source: https://github.com/genomelink/genomelink-python
+docs: https://genomelink.io/developers/
+schemes:
+- name: oauth2
+  source: https://github.com/genomelink/genomelink-python/blob/master/genomelink/oauth.py
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://genomelink.io/oauth/authorize
+    tokenUrl: https://genomelink.io/oauth/token
+scopes: []
+notes: >-
+  The OAuth authorization-code flow accepts a `scope` parameter (passed through
+  the SDK authorize_url / authorizeUrl helpers), and access is granted per
+  genetic-trait report requested by the consenting user (reports are addressed
+  by trait name, e.g. eye-color, and population). AWAKENS does not publish an
+  enumerated scope reference on the developers page, so no specific scope
+  strings are asserted here to avoid fabrication. scopes[] is intentionally
+  empty pending a published permissions reference.

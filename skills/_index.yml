@@ -1,0 +1,10 @@
+generated: '2026-07-18'
+method: generated
+source: https://github.com/genomelink/genomelink-python
+skills:
+- file: awakens-fetch-report.md
+  name: Fetch a genetic trait report from Genomelink
+  api: Genomelink Developer API
+  operations:
+  - GET /v1/reports/{name}/?population={population}
+  - POST /v1/enterprise/reports/

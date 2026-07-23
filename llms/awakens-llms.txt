@@ -1,0 +1,33 @@
+# AWAKENS (Genomelink)
+
+> AWAKENS operates Genomelink (genomelink.io), a personal-genomics platform where users upload raw DNA data exported from AncestryDNA, 23andMe, or MyHeritage to receive additional ancestry, trait, nutrition, and wellness reports across 50+ traits and 100,000+ SNPs. The Genomelink Developer API is an OAuth 2.0 (authorization-code) REST API for requesting a consenting user's genetic trait reports. Public developer access is currently marked "not available".
+
+## APIs
+- [Genomelink Developer API](https://genomelink.io/developers/): OAuth 2.0 REST API to fetch a user's genetic trait reports by trait name and population.
+
+## Authentication
+- OAuth 2.0 authorization-code flow: authorize at https://genomelink.io/oauth/authorize, token at https://genomelink.io/oauth/token, access token presented as HTTP Bearer.
+
+## Endpoints
+- GET https://genomelink.io/v1/reports/{name}/?population={population} — fetch a trait report (e.g. eye-color, european).
+- POST https://genomelink.io/v1/enterprise/reports/ — enterprise report exchange using the client secret.
+
+## SDKs
+- [genomelink (Python)](https://pypi.org/project/genomelink/): pip install --upgrade genomelink
+- [genomelink-node (Node.js)](https://www.npmjs.com/package/genomelink-node): npm install --save genomelink-node
+
+## Docs
+- [Developers](https://genomelink.io/developers/)
+- [Help / Support](https://genomelink.io/help)
+- [Blog](https://genomelink.io/blog)
+- [Terms of Use](https://genomelink.io/legal/terms-of-use)
+- [Privacy Policy](https://privacy.genomelink.io/privacy-policy)
+- [GitHub](https://github.com/genomelink)
+
+## Artifacts
+- Authentication: authentication/awakens-authentication.yml
+- OAuth errors: errors/awakens-oauth-errors.yml
+- Conventions: conventions/awakens-conventions.yml
+- Data model: data-model/awakens-data-model.yml
+- Sandbox test tokens: sandbox/awakens-sandbox.yml
+- Packages / SDKs: packages/awakens-packages.yml

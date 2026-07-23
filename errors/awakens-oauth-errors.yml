@@ -1,0 +1,55 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/genomelink/genomelink-python/blob/master/genomelink/errors.py
+format: oauth2-error-codes
+envelope: >-
+  OAuth errors are returned as an `error` query parameter on the redirect back
+  to the callback URL (RFC 6749 §4.1.2.1) and raised by the SDK as typed
+  exceptions. API-level failures raise GenomeLinkError ("Invalid request.").
+errors:
+- code: invalid_request
+  meaning: >-
+    The request is missing a required parameter, includes an invalid parameter
+    value, includes a parameter more than once, or is otherwise malformed.
+- code: invalid_client
+  meaning: Either the client_id or client_secret is invalid.
+- code: invalid_grant
+  meaning: >-
+    The provided authorization grant or refresh token is invalid, expired,
+    revoked, does not match the redirect URI, or was issued to another client.
+- code: unauthorized_client
+  meaning: The authenticated client is not authorized to use this grant type.
+- code: unsupported_grant_type
+  meaning: The authorization server does not support this grant type.
+- code: unsupported_response_type
+  meaning: The server does not support obtaining an auth code using this method.
+- code: invalid_scope
+  meaning: The requested scope is invalid, unknown, or malformed.
+- code: access_denied
+  meaning: The resource owner or authorization server denied the request.
+- code: server_error
+  meaning: The authorization server encountered an unexpected condition.
+- code: temporarily_unavailable
+  meaning: The server is temporarily overloaded or under maintenance.
+- code: invalid_token
+  meaning: The access token is expired, revoked, malformed, or otherwise invalid.
+- code: insufficient_scope
+  meaning: The request requires higher privileges than the access token provides.
+- code: unsupported_token_type
+  meaning: The server does not support revocation of the presented token type.
+- code: token_expired
+  meaning: The access token has expired (SDK TokenExpiredError).
+- code: mismatching_state
+  meaning: CSRF warning - state not equal in request and response.
+- code: missing_code
+  meaning: No authorization code present in the callback.
+- code: missing_token
+  meaning: No token present.
+- code: missing_token_type
+  meaning: No token_type present.
+- code: insecure_transport
+  meaning: OAuth 2 must use HTTPS.
+notes: >-
+  Verbatim from AWAKENS' official Python SDK error registry (errors.py), which
+  mirrors the RFC 6749 / oauthlib OAuth 2.0 error set the Genomelink
+  authorization server returns, plus SDK-specific transport/state errors.

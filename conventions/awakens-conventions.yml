@@ -1,0 +1,37 @@
+generated: '2026-07-18'
+method: derived
+source: https://github.com/genomelink/genomelink-python
+docs: https://genomelink.io/developers/
+authentication:
+  style: oauth2-bearer
+  flow: authorization_code
+  see: authentication/awakens-authentication.yml
+versioning:
+  scheme: uri-path
+  current: v1
+  evidence: Endpoints under /v1/ (e.g. /v1/reports/{name}/, /v1/enterprise/reports/).
+pagination:
+  supported: false
+  note: Report fetch returns a single trait report; no list pagination documented.
+idempotency:
+  supported: false
+  note: No idempotency-key header or contract is documented.
+request_tracing:
+  supported: false
+  note: No documented request-id / correlation header.
+error_envelope:
+  style: oauth2-error-codes
+  detail: >-
+    OAuth failures surface as an `error` code on the callback redirect; API
+    failures raise a generic error. See errors/awakens-oauth-errors.yml.
+rate_limit_signaling:
+  supported: unknown
+  note: No documented rate-limit headers.
+request_response:
+  base_url: https://genomelink.io
+  content_type: application/json
+  report_query_params: [population]
+notes: >-
+  Cross-cutting conventions derived from AWAKENS' official SDK and developers
+  page. No idempotency contract is documented, so no Idempotency pointer is
+  emitted.
