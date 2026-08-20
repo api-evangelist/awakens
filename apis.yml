@@ -45,6 +45,16 @@ tags:
 - Health
 - Consumer Genetics
 - Ancestry
+- Authentication
+- Personal Genomics
+tags_raw:
+- Company
+- Genomics
+- DNA
+- Bioinformatics
+- Health
+- Consumer Genetics
+- Ancestry
 - OAuth
 - Personal Genomics
 apis:
@@ -60,6 +70,11 @@ apis:
   humanURL: https://genomelink.io/developers/
   baseURL: https://genomelink.io
   tags:
+  - Genomics
+  - DNA
+  - Reports
+  - Authentication
+  tags_raw:
   - Genomics
   - DNA
   - Reports
