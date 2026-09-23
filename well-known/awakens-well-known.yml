@@ -1,21 +1,24 @@
 generated: '2026-07-18'
 method: searched
 host: https://genomelink.io
-documents:
-- path: /.well-known/security.txt
-  status: 404
-- path: /security.txt
-  status: 404
-- path: /.well-known/openid-configuration
-  status: 404
-- path: /.well-known/oauth-authorization-server
-  status: 404
-- path: /.well-known/api-catalog
-  status: 404
-- path: /.well-known/ai-plugin.json
-  status: 404
-note: >-
-  No /.well-known/ discovery documents are published on genomelink.io. The
-  OAuth 2.0 authorization-code endpoints (/oauth/authorize, /oauth/token) exist
-  but are not advertised via an oauth-authorization-server or
-  openid-configuration document. Absence recorded as valid data.
+note: No /.well-known/ discovery documents are published on genomelink.io. The OAuth 2.0 authorization-code
+  endpoints (/oauth/authorize, /oauth/token) exist but are not advertised via an oauth-authorization-server
+  or openid-configuration document. Absence recorded as valid data.
+hosts:
+- host: https://genomelink.io
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
