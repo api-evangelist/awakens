@@ -79,7 +79,6 @@ apis:
     the client secret. Note: the public developer API is currently marked "not
     available" on the developers page.
   humanURL: https://genomelink.io/developers/
-  baseURL: https://genomelink.io
   tags:
   - Genomics
   - DNA
