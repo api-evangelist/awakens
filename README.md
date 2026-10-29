@@ -64,6 +64,102 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-AWAKENS is a company surfaced as a portfolio company of 500-global and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+AWAKENS (operating the consumer product Genomelink at genomelink.io) is a personal-genomics company that lets people upload the raw DNA data they exported from AncestryDNA, 23andMe, or MyHeritage and receive additional ancestry, trait, nutrition, and wellness reports interpreted from a knowledge base of 100,000+ SNPs across 50+ genetic traits. For developers, AWAKENS published the Genomelink Developer API — an OAuth 2.0 (authorization-code) REST API that lets third-party apps request a user's genetic trait reports (for example eye-color by population) after the user consents, plus an enterprise reports endpoint. Official Python (`genomelink`) and Node.js (`genomelink-node`) SDKs were shipped on PyPI and npm. The public developer API is currently marked "not available" on the developers page, so the artifacts here capture the documented OAuth surface, SDKs, and test credentials from AWAKENS' own first-party sources.
 
-Backed by: 500-global — https://genomelink.io
+**Areas:** Company · Genomics · DNA · Bioinformatics · Health · Consumer Genetics · Ancestry · Authentication · Personal Genomics
+
+## AWAKENS on APIs.io
+
+Everything profiled for AWAKENS is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/awakens/](https://apis.io/providers/awakens/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Genomelink Developer API](https://apis.io/apis/awakens/genomelink-developer-api/) — OAuth 2.0 REST API for requesting a consenting user's genetic trait reports from Genomelink. A report is fetched by trait name and population (for example…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [awakens-genomelink](https://apis.io/servers/awakens/awakens-genomelink/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Awakens Authentication](https://apis.io/security/awakens/awakens-authentication/)
+- [Awakens Domain Security](https://apis.io/security/awakens/awakens-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Awakens Scopes](https://apis.io/scopes/awakens/awakens-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://genomelink.io)
+- [Sign up](https://genomelink.io/signup/)
+- [Support](https://genomelink.io/help)
+- [Blog](https://genomelink.io/blog)
+- [Terms of service](https://genomelink.io/legal/terms-of-use)
+- [Privacy policy](https://privacy.genomelink.io/privacy-policy)
+- [GitHub](https://github.com/genomelink)
+
+## API Evangelist rating
+
+**Kin Score 26.2** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 0.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 44.6 |
+| Access clarity | 34.2 |
+
+**Agent readiness 6.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 32.8** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/awakens/](https://apis.io/providers/awakens/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for AWAKENS: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/awakens/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
